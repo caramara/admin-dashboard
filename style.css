@@ -8,133 +8,169 @@ body{
     margin: 0;
     padding: 0;
 }
+hr{
+    border: 1px solid hsl(0, 0%, 90%);
+    width: 80%;
+    margin: 15px auto;
+}
+
 .container{
     display: grid;
-    grid: 1fr 5fr/1fr 4fr;
+    grid: 1fr 5fr/250px 1fr;
     
 }
 .dashboard{
-    border: solid 1px black;
     grid-row: 1/-1;
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
+    padding: 20px;
+    background-color: hsl(140, 36%, 51%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+    font-size: 1.2rem;
 }
 .dashboard .logo{
-    padding-bottom: 2rem;
+    padding-bottom: 20px;
+}
+.dashboard ul{
+    margin-top: 30px;
 }
 .dashboard ul>li{
-    padding: 0.7rem;
+    padding: 12px;
 }
 .header{
-    border: solid 1px black;
     grid-column: 2/-1;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 0 3rem;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 1px 6px 5px hsl(0, 0%, 0%, 0.07),
+    0px 2px 3px hsl(0, 0%, 0%, 0.15);
+    position: relative;
+    z-index: 1;
 }
 .header .nav-bar{
-    border: solid 1px blue;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.header .nav-bar .search{
+    flex-basis: 70%;
+}
+.header .nav-bar input[type="search"]{
+    width: 70%;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    padding: 5px;
+    background-color: hsl(0, 0%, 93%);
 }
 .header .nav-bar .notifications{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 .header .welcome{
-    border: solid 1px blue;
     display:flex;
     justify-content: space-between;
     align-items: center;
+    font-weight:600;
+}
+.header .profile p:nth-child(2){
+    font-size: 1.5rem;
+    color: hsl(170, 65%, 21%);
 }
 .header ul{
     display: flex;
     justify-content: space-between;
     gap: 20px;
 }
+.header button{
+    border: none;
+    width: 5rem;
+    padding: 8px;
+    border-radius: 15px;
+    background-color: hsl(162, 62%, 41%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+}
 .main-content{
-    border: solid 1px red;
     grid-column: 2/-1;
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 10px;
+    grid: 1fr 1fr/3fr 1fr;
+    gap: 20px;
     padding: 3rem 1rem;
+    background-color: hsl(0, 0%, 95%);
 }
-.main-content .projects{
+.projects{
+    grid-row: 1/-1;
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 10px;
+    gap: 30px;
 }
-.main-content .projects .project{
-    height: 200px;
-    border-radius: 7px;
-    border: 1px solid blue;
-    margin: 10px;
-    padding: 10px;
+.projects .project{
+    border-radius: 10px;
+    border-left: solid 7px hsl(162, 62%, 41%);
+    padding: 20px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 1px 6px 5px hsl(0, 0%, 0%,0.07),
+    0px 2px 3px hsl(0, 0%, 0%, 0.15);
 }
-.main-content .projects > p{
-   position: absolute;
-   top: -20px;
-   left: 10px;
+.project p:first-child {
+    font-weight: bold;
+    margin-bottom: 7px;
 }
-.main-content .right-column{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap:20px;
-}
-.main-content .announcements{
-    position: relative;
-    top: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    max-height: 400px;
+.announcements{
     margin-bottom: 40px;
-    border: solid 1px black;
-    border-radius: 7px;
+
 }
-.main-content .announcements .announcement{
+.announcements .announcement{
     max-height: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 0.8rem;
-    border-radius: 7px;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid blue;
+    border-radius: 10px;
+    padding: 0;
 }
 .announcement p:first-child {
-    margin-top: 0;
+    font-weight: 600;
   }
-.main-content .announcements > p{
-    position: absolute;
-    top: -30px;
-    left: 10px;
+.trending{
+    gap: 30px;
 }
-.main-content .trending{
+.trend{
+    border-radius: 7px;
+    font-size: 0.9rem;
+    font-weight: 550;
+}
+.trend p:first-child{
+    color: hsl(170, 65%, 21%);
+}
+.project p:nth-child(2),
+.announcement p:nth-child(2),
+.trend p:nth-child(2){
+    color: hsl(0, 0%, 50%);
+}
+.announcements,
+.trending{
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    border: solid 1px black;
-    border-radius: 7px;;
+    justify-content: space-around;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 1px 6px 5px hsl(0, 0%, 0%,0.07),
+    0px 2px 3px hsl(0, 0%, 0%, 0.15);
 }
-.main-content .trending > p{
+.projects> p,
+.announcements> p,
+.trending > p{
     position: absolute;
     top: -30px;
-    left: 10px;
-}
-.main-content .trending .trend{
-    height: auto;
-    padding:10px;
-    border-radius: 7px;
-    margin: 10px;
-    border: solid 1px blue;
+    font-weight: 600;
+    color: hsl(170, 52%, 20%);
 }
