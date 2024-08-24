@@ -30,12 +30,16 @@ hr{
 }
 .dashboard .logo{
     padding-bottom: 20px;
+    display: flex;
+    align-items: center;
 }
 .dashboard ul{
     margin-top: 30px;
 }
 .dashboard ul>li{
     padding: 12px;
+    display: flex;
+    align-items: center;
 }
 .header{
     grid-column: 2/-1;
@@ -55,6 +59,8 @@ hr{
 }
 .header .nav-bar .search{
     flex-basis: 70%;
+    display: flex;
+    align-items: center;
 }
 .header .nav-bar input[type="search"]{
     width: 70%;
@@ -63,6 +69,20 @@ hr{
     border: none;
     padding: 5px;
     background-color: hsl(0, 0%, 93%);
+}
+.header .nav-bar .profile-pic{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile-pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.header .nav-bar .notifications p{
+    font-weight: 600;
 }
 .header .nav-bar .notifications{
     display:flex;
@@ -159,4 +179,12 @@ hr{
     top: -30px;
     font-weight: 600;
     color: hsl(170, 52%, 20%);
+}
+.dashboard svg{
+    fill: hsl(0, 0%, 100%);
+    stroke: hsl(0, 0%, 100%);
+    margin: 0px 5px;
+}
+.header svg{
+    margin: 0px 5px;
 }
