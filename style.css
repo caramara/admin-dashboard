@@ -70,11 +70,21 @@ hr{
     padding: 5px;
     background-color: hsl(0, 0%, 93%);
 }
-.header .nav-bar .profile-pic{
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.profile-pic{
+    box-sizing: border-box;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     overflow: hidden;
+}
+.profile-pic.large{
+    width: 80px;
+    height: 80px;
 }
 .profile-pic img{
     width: 100%;
@@ -96,7 +106,7 @@ hr{
     align-items: center;
     font-weight:600;
 }
-.header .profile p:nth-child(2){
+.header .profile-message p:nth-child(2){
     font-size: 1.5rem;
     color: hsl(170, 65%, 21%);
 }
